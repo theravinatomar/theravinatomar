@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ravina Tomar | HR Specialist</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap');
+:root{
+  --bg:#0D0D0D; --card:#161513; --border:#2a2825; --text:#F4F1EA; --muted:#a8a29a;
+  --accent:#C9A84C; --accent-soft:rgba(201,168,76,0.12);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;font-weight:300;}
+.container{max-width:1180px;margin:0 auto;padding:0 40px;}
+h1,h2,h3{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:1px;line-height:1.05;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+
+.navbar{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(13,13,13,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
+.navbar .container{display:flex;justify-content:space-between;align-items:center;height:76px;}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:2px;}
+.nav-links{display:flex;gap:36px;}
+.nav-links a{font-size:0.85rem;letter-spacing:1px;text-transform:uppercase;color:var(--muted);transition:color .2s;position:relative;}
+.nav-links a:hover,.nav-links a.active{color:var(--accent);}
+@media(max-width:760px){.nav-links{gap:18px;} .nav-links a{font-size:0.7rem;}}
+
+.eyebrow{color:var(--accent);font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px;font-weight:600;}
+
+.btn{display:inline-block;padding:15px 32px;font-size:0.82rem;letter-spacing:1.5px;text-transform:uppercase;border-radius:2px;font-weight:600;transition:all .25s;}
+.btn-primary{background:var(--accent);color:#0D0D0D;}
+.btn-primary:hover{background:#e0c26a;}
+.btn-outline{border:1px solid var(--border);color:var(--text);}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);}
+
+.back-link{display:inline-block;margin-bottom:24px;color:var(--muted);font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;}
+.back-link:hover{color:var(--accent);}
+
+.divider{height:1px;background:var(--border);width:100%;margin:0;}
+
+.page-hero{padding:190px 0 80px;border-bottom:1px solid var(--border);}
+.page-hero h1{font-size:3.2rem;margin-bottom:20px;}
+.page-hero p{color:var(--muted);max-width:680px;font-size:1.02rem;}
+@media(max-width:760px){.page-hero h1{font-size:2.2rem;} .page-hero{padding:150px 0 60px;}}
+
+footer{background:#000;border-top:1px solid var(--border);padding:60px 0 32px;margin-top:0;}
+footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;}
+footer .foot-name{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;}
+footer .foot-links{display:flex;gap:28px;flex-wrap:wrap;}
+footer .foot-links a{color:var(--muted);font-size:0.85rem;}
+footer .foot-links a:hover{color:var(--accent);}
+footer .foot-bottom{border-top:1px solid var(--border);margin-top:36px;padding-top:24px;color:var(--muted);font-size:0.78rem;text-align:center;}
+
+
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:76px;border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-20%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,var(--accent-soft),transparent 70%);pointer-events:none;}
+.hero .container{position:relative;z-index:2;}
+.hero h1{font-size:5.2rem;margin-bottom:8px;}
+.hero .role{font-size:1.4rem;color:var(--muted);margin-bottom:28px;font-family:'Inter',sans-serif;font-weight:300;}
+.hero p.desc{max-width:640px;color:var(--muted);margin-bottom:40px;font-size:1.02rem;}
+.hero-btns{display:flex;gap:18px;flex-wrap:wrap;}
+@media(max-width:760px){.hero h1{font-size:3rem;}}
+
+.stats-section{padding:70px 0;border-bottom:1px solid var(--border);}
+.stats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;}
+.stat-item{text-align:center;border-right:1px solid var(--border);padding:0 10px;}
+.stat-item:last-child{border-right:none;}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:var(--accent);}
+.stat-label{color:var(--muted);font-size:0.78rem;letter-spacing:1px;text-transform:uppercase;margin-top:6px;}
+@media(max-width:860px){.stats-grid{grid-template-columns:repeat(2,1fr);} .stat-item{border-right:none;border-bottom:1px solid var(--border);padding-bottom:20px;}}
+
+.about-section{padding:110px 0;border-bottom:1px solid var(--border);}
+.about-grid{display:grid;grid-template-columns:220px 1fr;gap:60px;}
+.about-grid + .about-grid{margin-top:60px;padding-top:60px;border-top:1px solid var(--border);}
+.about-label{font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--accent);font-weight:600;}
+.about-text p{color:var(--muted);margin-bottom:14px;}
+@media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:16px;}}
+
+.exp-section{padding:110px 0;border-bottom:1px solid var(--border);}
+.section-title{font-size:2.8rem;margin-bottom:60px;}
+.exp-role{margin-bottom:70px;padding-bottom:50px;border-bottom:1px solid var(--border);}
+.exp-role:last-child{border-bottom:none;margin-bottom:0;}
+.exp-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px;margin-bottom:6px;}
+.exp-head h3{font-size:1.7rem;color:var(--text);}
+.exp-dates{color:var(--accent);font-size:0.85rem;letter-spacing:1px;text-transform:uppercase;}
+.exp-org{color:var(--muted);font-size:0.95rem;margin-bottom:6px;}
+.exp-sub{color:var(--accent);font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;margin:26px 0 14px;}
+.exp-list{list-style:none;}
+.exp-list li{position:relative;padding-left:22px;margin-bottom:12px;color:var(--muted);font-size:0.94rem;}
+.exp-list li::before{content:"—";position:absolute;left:0;color:var(--accent);}
+
+.skills-section{padding:110px 0;border-bottom:1px solid var(--border);}
+.skills-cat{margin-bottom:44px;}
+.skills-cat h4{font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:18px;font-weight:600;}
+.pill-wrap{display:flex;flex-wrap:wrap;gap:10px;}
+.pill{background:var(--card);border:1px solid var(--border);color:var(--text);font-size:0.85rem;padding:9px 18px;border-radius:20px;}
+
+.edu-section{padding:110px 0;border-bottom:1px solid var(--border);}
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;}
+.edu-card{border:1px solid var(--border);padding:28px;border-radius:4px;background:var(--card);}
+.edu-card .deg{font-size:1.05rem;margin-bottom:8px;color:var(--text);font-weight:600;}
+.edu-card .inst{color:var(--muted);font-size:0.88rem;margin-bottom:4px;}
+.edu-card .yr{color:var(--accent);font-size:0.8rem;letter-spacing:1px;}
+.lang-row{display:flex;gap:40px;margin-top:40px;flex-wrap:wrap;}
+.lang-item{color:var(--muted);font-size:0.92rem;}
+.lang-item b{color:var(--text);}
+@media(max-width:860px){.edu-grid{grid-template-columns:1fr;}}
+
+.contact-section{padding:130px 0;text-align:center;}
+.contact-section h2{font-size:3.4rem;margin-bottom:24px;}
+.contact-section p{color:var(--muted);margin-bottom:36px;}
+.contact-info{display:flex;justify-content:center;gap:40px;margin-top:50px;flex-wrap:wrap;color:var(--muted);font-size:0.92rem;}
+.contact-info a{color:var(--text);}
+.contact-info a:hover{color:var(--accent);}
+
+</style>
+</head>
+<body id="top">
+
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">RAVINA TOMAR</a>
+    <div class="nav-links"><a href="index.html#top" class="active">Home</a><a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="index.html#contact">Contact</a></div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">HR Specialist · Strategic HR Leadership</div>
+    <h1>Ravina Tomar</h1>
+    <div class="role">International & Multilateral Organisations — UN Agency, WHO</div>
+    <p class="desc">HR professional with 8+ years of progressively responsible experience spanning HR operations, strategic workforce planning, employee relations, and organisational change within international and multilateral environments, including the World Health Organization (WHO) and the British High Commission (UK Government).</p>
+    <div class="hero-btns">
+      <a href="#experience" class="btn btn-primary">View Experience</a>
+      <a href="projects.html" class="btn btn-outline">See Projects</a>
+    </div>
+  </div>
+</section>
+
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-num">8+</div>
+        <div class="stat-label">Years of HR Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">95%+</div>
+        <div class="stat-label">SLA Resolution Rate</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">80–120</div>
+        <div class="stat-label">Multi-Country Staff Managed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">1,500–2,000</div>
+        <div class="stat-label">High-Risk Cases Annually</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Performance Recognitions</div>
+      </div></div>
+  </div>
+</section>
+
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-label">Professional<br>Summary</div>
+      <div class="about-text">
+        <p>Proven track record leading regional prioritization exercises, workforce realignment, talent identification, grievance resolution, and investigation documentation across geographically dispersed, multicultural teams.</p>
+        <p>Skilled in leveraging Microsoft Office (Advanced), Power BI, HRIS platforms, and AI-enabled tools to drive data-informed HR decisions, reduce turnaround time, and maintain zero-audit-observation compliance. Adept at translating strategic mandates into operational execution while managing sensitive, high-stakes matters with absolute discretion.</p>
+      </div>
+    </div>
+    <div class="about-grid">
+      <div class="about-label">Career<br>Highlights</div>
+      <div class="about-text">
+        <p>Directed HR operations for a multicultural, multi-country office population of 80–120 staff, sustaining a 95%+ SLA resolution rate and zero audit observations.</p>
+        <p>Led a regional realignment and prioritization exercise for WHO's South-East Asia Region (SEARO), restructuring roles and functions across HQ, regional, and country-office stakeholders during organisational downsizing.</p>
+        <p>Engineered cross-regional Excel/Power BI dashboards that lifted data accuracy by 25% and workflow visibility by 20%, cutting case-resolution turnaround by 15–20%.</p>
+        <p>Managed a portfolio of 1,500–2,000 complex, high-risk cases annually under UK Government regulatory frameworks with 100% documentation compliance.</p>
+        <p>Received 5 performance recognitions for leadership, discretion, and delivery excellence in fast-paced, high-pressure settings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="exp-section" id="experience">
+  <div class="container">
+    <div class="eyebrow">Career Journey</div>
+    <h2 class="section-title">Professional Experience</h2>
+    
+      <div class="exp-role">
+        <div class="exp-head">
+          <h3>HR Specialist to Regional Director</h3>
+          <span class="exp-dates">Oct 2023 – Dec 2025</span>
+        </div>
+        <div class="exp-org">World Health Organization (WHO) – SEARO · New Delhi, India</div>
+        <div class="exp-sub">Regional HR Operations, Workforce Planning & Compliance</div>
+        <ul class="exp-list"><li>Spearheaded end-to-end HR operations for a multicultural regional office, including recruitment administration, onboarding/offboarding, contract lifecycle, promotions, and transfers — sustaining 100% documentation compliance.</li><li>Championed a regional workforce realignment initiative, partnering with the Regional Director's office to align roles and functions to revised strategic priorities amid organizational restructuring.</li><li>Orchestrated workforce planning and talent identification efforts, evaluating staffing gaps, revising position descriptions, and aligning capabilities to priority functions across HQ, regional, and country office stakeholders.</li><li>Administered employee lifecycle transactions (contracts, extensions, separations, bona fide certificates) with precision and confidentiality across diverse staff categories and duty stations.</li><li>Mediated on-ground employee grievances and routine employee relations matters as first point of contact, applying policy guidance, escalating complex cases, and documenting investigation outcomes with discretion.</li><li>Directed performance management cycle operations, including goal setting tracking, mid-year/annual review coordination, and calibration support, ensuring full documentation compliance.</li><li>Engineered HRIS-based workforce reports and Power BI/Excel dashboards for leadership visibility, improving data accuracy by 25% and enabling evidence-based decision making.</li><li>Oversaw compensation and benefits administration — enrollment, salary data coordination, allowance processing, and policy communication — for a geographically dispersed staff population.</li><li>Authored and updated HR policies, SOPs, and compliance checklists aligned with WHO regulations and local labour law, mitigating organizational risk.</li><li>Facilitated training logistics and orientation programs for new joiners and transitioning staff, leveraging Microsoft Office and AI-enabled scheduling tools to streamline delivery.</li><li>Executed end-to-end contract renewal for 900+ field staff, tracking medical clearance follow-ups, prior year performance report summaries, and multi-level supervisor/team lead approvals across offline channels and the HRMS.</li><li>Dispatched renewal contracts and monitored countersigned returns across the full field staff population, maintaining zero lapse continuity through a real-time tracking log.</li><li>Issued bona fide certificates and employment verification documents, safeguarding accuracy and confidentiality of personnel data across duty stations.</li><li>Compiled interview documentation for global recruitment drives, consolidating panel scoring sheets and evaluator comments into audit-ready records — for NPO, Professional, and Director grade positions.</li><li>Deployed and administered global-level written and presentation assessments across platforms including HireVue, Microsoft Forms, and SurveyMonkey, standardizing candidate evaluation across regions and time zones.</li></ul>
+      </div>
+      <div class="exp-role">
+        <div class="exp-head">
+          <h3>Administrative Officer / Entry Clearance Assistant (UK Visa and Immigration)</h3>
+          <span class="exp-dates">Apr 2022 – Oct 2023</span>
+        </div>
+        <div class="exp-org">British High Commission, New Delhi (UKVI) – UK Government · New Delhi, India</div>
+        <div class="exp-sub">UK Visa Case Operations, Team Leadership & Regulatory Compliance</div>
+        <ul class="exp-list"><li>Supervised and developed a 10-member caseworking team, allocating workloads, monitoring productivity and quality, conducting performance feedback, and coaching officers on UK immigration law, risk assessment, case prioritization, and SLA compliance.</li><li>Directed a portfolio of 1,500–2,000 complex, high-risk cases annually in a high-volume, regulated environment, upholding prioritization discipline, quality control, and SLA adherence.</li><li>Assessed visa applications against UK Immigration Rules, evaluating supporting documentation, biometric data, and risk-streaming outputs to determine eligibility for entry clearance.</li><li>Adjudicated entry-clearance decisions across multiple visa categories, weighing evidence, applicant history, and sponsor/employer documentation to issue grants or refusals within published service standards.</li><li>Drafted explanatory statements, refusal notices, and formal correspondence responding to enquiries from applicants, sponsors, solicitors, and Home Office stakeholders, ensuring clarity and legal defensibility.</li><li>Captured and verified visa application data within UKVI case-working systems, performing enrichment checks and cross-referencing records to eliminate data-entry discrepancies.</li><li>Mentored a 4-member team, coaching case officers on structured problem-solving, prioritization, and compliance standards under UK immigration law.</li><li>Engineered operational dashboards that improved workflow visibility by 20% and reduced case-resolution timelines by 15–20% through data-led process redesign.</li><li>Safeguarded 100% compliance accuracy in handling sensitive personal data and decision records under UK immigration law and data-protection standards, contributing to zero adverse audit findings.</li><li>Facilitated visa interviews and applicant consultations, providing interpretation support where required and ensuring vulnerable applicants were treated with sensitivity and fairness.</li><li>Resolved time-sensitive escalations and investigations by collaborating with internal teams, external partners, and applicants under tight deadlines.</li><li>Dispatched approved visas and refusal notices in accordance with UKVI despatch standards, ensuring original documents were returned accurately, and no data-protection breaches occurred.</li><li>Standardized SOPs and case-processing protocols, reducing errors and improving consistency across the caseworking team.</li><li>Monitored correspondence and telephone enquiries against local service-standard targets, maintaining professional, courteous engagement with all callers and applicants.</li></ul>
+      </div>
+      <div class="exp-role">
+        <div class="exp-head">
+          <h3>HR Operations & Administration – Examinations</h3>
+          <span class="exp-dates">2019 – 2022</span>
+        </div>
+        <div class="exp-org">British Council | Pan India</div>
+        <div class="exp-sub">Executive Administration, Recruitment Coordination & HR Support</div>
+        <ul class="exp-list"><li>Delivered end-to-end HR operations support for internationally recruited personnel, consultants, project staff, and field-based employees across multiple Indian states, ensuring consistent application of internal policies, contractual terms, and local employment requirements.</li><li>Administered the full employee lifecycle, including pre-boarding, induction, appointment documentation, contract issuance and amendments, probation tracking, extensions, transfers, role changes, leave administration, separations, and personnel-file closure.</li><li>Maintained secure, audit-ready personnel records and HR documentation, verifying completeness of appointment letters, contracts, identification documents, educational credentials, background checks, medical clearances, and statutory forms in line with document-retention requirements.</li><li>Coordinated onboarding and orientation for new employees, consultants, and field personnel, aligning hiring managers, IT, Finance, Administration, Security, and programme teams to ensure timely system access, workspace readiness, policy briefings, and first-day support.</li><li>Prepared employment contracts, consultancy agreements, extensions, amendments, confirmation letters, experience certificates, employment verifications, and other official HR correspondence, ensuring accuracy, confidentiality, and timely approval routing.</li><li>Tracked contract-expiry dates, probation milestones, consultant deliverables, performance documentation, and renewal approvals through structured trackers and HR systems, proactively alerting managers to prevent employment or project-delivery disruptions.</li><li>Liaised with immigration vendors, government authorities, travel providers, and internal focal points on visa, work-permit, Foreigners Regional Registration Office (FRRO), invitation-letter, and cross-border mobility requirements for international personnel.</li><li>Monitored immigration-document validity and renewal timelines, following up on passport copies, visa extensions, medical requirements, travel clearances, and supporting letters while maintaining confidential, audit-ready mobility records.</li><li>Advised internationally recruited staff and managers on HR processes, conditions of service, leave, benefits, travel-related documentation, onboarding requirements, and locally applicable administrative procedures; escalated complex matters to senior HR or legal stakeholders where required.</li><li>Partnered with hiring managers and project leaders to translate approved staffing plans into recruitment and onboarding actions, ensuring roles, funding sources, contract modalities, duty stations, reporting lines, and start dates were accurately documented.</li><li>Drove workforce-planning and people-data tracking for project-funded and time-bound assignments involving cross-functional, regional, and cross-country stakeholders, supporting appropriate deployment of talent against programme priorities.</li><li>Consolidated staffing information — including headcount, vacancies, position status, contract end dates, consultants, project assignments, leave trends, and workforce movements — into management-ready reports and trackers.</li><li>Analyzed workforce gaps, upcoming separations, recruitment pipelines, and contract-renewal requirements, enabling managers to anticipate resourcing risks and maintain operational continuity across geographically dispersed teams.</li><li>Reconciled HR data with Finance, Payroll, Procurement, and programme teams to validate personnel costs, contract status, funding availability, cost-centre allocations, and project staffing requirements.</li><li>Generated periodic HR dashboards and status reports for leadership, improving visibility of headcount, recruitment progress, onboarding readiness, contractual obligations, compliance actions, and field-office staffing needs.</li><li>Strengthened data quality by conducting routine checks of employee records, organizational charts, staffing trackers, HRIS entries, and reporting lines; identified missing or inconsistent information and drove corrective action with relevant stakeholders.</li><li>Monitored compliance with internal HR frameworks, delegation-of-authority requirements, code-of-conduct standards, contract terms, and applicable Indian labour regulations across diverse duty stations.</li><li>Reviewed personnel files and HR transactions against established compliance checklists, identifying documentation gaps, overdue approvals, incomplete statutory records, or potential policy deviations before they escalated into audit concerns.</li><li>Escalated employment, contractual, documentation, and local-compliance risks to senior HR leadership, recommending practical corrective actions and tracking closure in collaboration with managers and operational teams.</li><li>Supported internal audits, compliance reviews, and management assurance exercises by producing accurate personnel documentation, contract histories, approval trails, workforce reports, and evidence of policy adherence.</li><li>Updated HR SOPs, process maps, checklists, and staff guidance notes to reflect organizational policy changes, project requirements, and local operational realities, improving consistency across offices and field locations.</li><li>Protected confidential employee information by applying data-privacy controls to personnel files, HRIS records, recruitment documents, medical information, contract data, and employee-relations correspondence.</li><li>Served as the primary coordination point between hiring managers, field staff, project teams, central HR, Finance, and Administration, resolving day-to-day operational issues affecting employees and consultants.</li><li>Addressed routine employee queries related to contracts, leave, benefits, payroll inputs, travel documentation, workplace policies, onboarding, and employment records, providing timely guidance and escalating sensitive matters appropriately.</li><li>Facilitated the resolution of field-based employee grievances and operational concerns through fact gathering, stakeholder follow-up, documentation, and confidential communication, supporting fair and policy-aligned outcomes.</li><li>Cultivated effective working relationships with geographically dispersed staff and managers, ensuring HR communications, policy updates, deadlines, and required actions were understood and completed on time.</li><li>Coordinated HR meetings, employee briefings, induction sessions, policy-awareness initiatives, and manager check-ins, strengthening two-way communication between central HR and field operations.</li></ul>
+      </div>
+      <div class="exp-role">
+        <div class="exp-head">
+          <h3>HR Executive Assistant</h3>
+          <span class="exp-dates">2017 – 2020</span>
+        </div>
+        <div class="exp-org">Reliqus Consulting & Halwasiya Development — Delhi, India</div>
+        <div class="exp-sub">Multi-State HR Operations, Mobility & Employee Lifecycle Support</div>
+        <ul class="exp-list"><li>Orchestrated 50+ senior-leadership engagements annually, managing end-to-end calendar governance, stakeholder availability, agenda development, venue or virtual-platform logistics, briefing packs, meeting materials, attendance coordination, and post-meeting documentation for executive forums.</li><li>Prepared concise leadership briefing notes, meeting agendas, presentations, decision logs, and action trackers; captured outcomes and systematically followed up with accountable owners to ensure timely closure of priority actions.</li><li>Designed and maintained operational trackers for recruitment progress, interview status, candidate pipelines, leadership actions, project deliverables, and workflow milestones, strengthening visibility, ownership, and cross-team accountability.</li><li>Consolidated updates from hiring managers, interview panels, and operational stakeholders into management-ready reports, highlighting pending approvals, hiring bottlenecks, upcoming deadlines, and required decisions.</li><li>Delivered confidential HR and executive-administration support under tight deadlines, including interview scheduling, candidate communication, panel coordination, recruitment-document management, onboarding documentation, and personnel-record maintenance.</li><li>Scheduled interviews across multiple seniority levels, aligning panel availability, candidate time zones, meeting links, assessment materials, interview packs, and feedback deadlines to deliver a professional candidate experience.</li><li>Compiled interview documentation — including CVs, application forms, interview schedules, assessment records, panel feedback, evaluation forms, and selection recommendations — into complete, confidential, audit-ready files.</li><li>Liaised with selected candidates, hiring managers, HR, Finance, IT, Administration, and external vendors to coordinate pre-boarding requirements, appointment documentation, workspace or system-access requests, inductions, and joining formalities.</li><li>Maintained accurate and secure personnel files, correspondence, employment documentation, and leadership records, applying strict confidentiality and document-control practices for sensitive employee and organizational information.</li><li>Streamlined meeting and administrative workflows by introducing standardized templates, trackers, checklists, and follow-up mechanisms, reducing missed actions and improving the reliability of leadership reporting.</li><li>Monitored outstanding approvals, deliverables, and action items, proactively escalating overdue matters and enabling leadership teams to make informed, timely decisions.</li><li>Facilitated internal communications for leadership announcements, meeting outcomes, policy updates, recruitment activities, and operational deadlines, ensuring messages were clear, appropriately targeted, and issued on time.</li></ul>
+      </div>
+  </div>
+</section>
+
+<section class="skills-section" id="skills">
+  <div class="container">
+    <div class="eyebrow">Capabilities</div>
+    <h2 class="section-title">Core Competencies</h2>
+    
+      <div class="skills-cat">
+        <h4>Strategic HR & Leadership</h4>
+        <div class="pill-wrap"><span class="pill">Strategic HR Leadership & Planning</span><span class="pill">Workforce & Succession Planning</span><span class="pill">Talent Identification & Sourcing</span><span class="pill">Change Management & Organisational Restructuring</span><span class="pill">Multi-Country Team Leadership</span><span class="pill">Manager Coaching</span></div>
+      </div>
+      <div class="skills-cat">
+        <h4>Employee & Labour Relations</h4>
+        <div class="pill-wrap"><span class="pill">Employee & Labour Relations</span><span class="pill">Grievance Handling & Investigations</span><span class="pill">Conflict Resolution</span><span class="pill">Confidential Case Management</span><span class="pill">Employee Engagement</span><span class="pill">Workplace Culture</span></div>
+      </div>
+      <div class="skills-cat">
+        <h4>Recruitment & Talent</h4>
+        <div class="pill-wrap"><span class="pill">Full-Cycle Recruitment</span><span class="pill">Onboarding / Offboarding Coordination</span><span class="pill">Talent Retention Strategies</span><span class="pill">Exit Interview Management</span><span class="pill">Performance Management</span></div>
+      </div>
+      <div class="skills-cat">
+        <h4>Analytics & Systems</h4>
+        <div class="pill-wrap"><span class="pill">HRIS / HR Systems (Workday, Greenhouse, Lever)</span><span class="pill">Microsoft Office Suite (Advanced) & Power BI</span><span class="pill">AI-Enabled HR Tools & Automation</span><span class="pill">HR Analytics & Reporting</span><span class="pill">Excel & Power BI Dashboards</span><span class="pill">Data Analysis</span><span class="pill">Applicant Tracking Systems</span></div>
+      </div>
+      <div class="skills-cat">
+        <h4>Compliance & Governance</h4>
+        <div class="pill-wrap"><span class="pill">Policy Development & Governance</span><span class="pill">Compliance & Audit Readiness</span><span class="pill">Regulatory Alignment</span><span class="pill">Benefits Administration & Design</span><span class="pill">Process Compliance & Documentation</span></div>
+      </div>
+      <div class="skills-cat">
+        <h4>Culture & Strategy</h4>
+        <div class="pill-wrap"><span class="pill">Cross-Cultural Stakeholder Engagement</span><span class="pill">DEI Strategy</span><span class="pill">HR Process Optimization</span><span class="pill">Workflow Improvement</span><span class="pill">Stakeholder Coordination Across Locations</span></div>
+      </div>
+  </div>
+</section>
+
+<section class="edu-section" id="education">
+  <div class="container">
+    <div class="eyebrow">Academic Background</div>
+    <h2 class="section-title">Education &amp; Certifications</h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="deg">M.A. – Public Administration</div>
+        <div class="inst">IGNOU University</div>
+        <div class="yr">Ongoing</div>
+      </div>
+      <div class="edu-card">
+        <div class="deg">M.Sc. – Resource Management & Ergonomics (HRM)</div>
+        <div class="inst">SNDT Women's University</div>
+        <div class="yr">Completed</div>
+      </div>
+      <div class="edu-card">
+        <div class="deg">Diploma – Human Resource Management</div>
+        <div class="inst">Executive Strategy & Management, Alison</div>
+        <div class="yr">2024</div>
+      </div></div>
+    <div class="lang-row">
+      <div class="lang-item"><b>English</b> — Fluent (Written &amp; Verbal)</div>
+      <div class="lang-item"><b>Hindi</b> — Native / Proficient</div>
+      <div class="lang-item"><b>French</b> — Beginner</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="eyebrow">Get In Touch</div>
+    <h2>Let's Connect</h2>
+    <p>Based in New Delhi, India — open to relocation.</p>
+    <div class="contact-info">
+      <a href="mailto:theravinatomar@gmail.com">theravinatomar@gmail.com</a>
+      <a href="tel:+919811687268">+91 9811687268</a>
+      <a href="https://www.linkedin.com/in/theravinatomar" target="_blank">linkedin.com/in/theravinatomar</a>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="container">
+    <div class="foot-name">RAVINA TOMAR</div>
+    <div class="foot-links">
+      <a href="mailto:theravinatomar@gmail.com">theravinatomar@gmail.com</a>
+      <a href="tel:+919811687268">+91 9811687268</a>
+      <a href="https://www.linkedin.com/in/theravinatomar" target="_blank">LinkedIn</a>
+      <a href="index.html#contact">New Delhi, India</a>
+    </div>
+  </div>
+  <div class="foot-bottom">© 2026 Ravina Tomar. All rights reserved.</div>
+</footer>
+
+
+</body>
+</html>

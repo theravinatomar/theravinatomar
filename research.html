@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research | Ravina Tomar</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap');
+:root{
+  --bg:#0D0D0D; --card:#161513; --border:#2a2825; --text:#F4F1EA; --muted:#a8a29a;
+  --accent:#C9A84C; --accent-soft:rgba(201,168,76,0.12);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;font-weight:300;}
+.container{max-width:1180px;margin:0 auto;padding:0 40px;}
+h1,h2,h3{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:1px;line-height:1.05;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+
+.navbar{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(13,13,13,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
+.navbar .container{display:flex;justify-content:space-between;align-items:center;height:76px;}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:2px;}
+.nav-links{display:flex;gap:36px;}
+.nav-links a{font-size:0.85rem;letter-spacing:1px;text-transform:uppercase;color:var(--muted);transition:color .2s;position:relative;}
+.nav-links a:hover,.nav-links a.active{color:var(--accent);}
+@media(max-width:760px){.nav-links{gap:18px;} .nav-links a{font-size:0.7rem;}}
+
+.eyebrow{color:var(--accent);font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px;font-weight:600;}
+
+.btn{display:inline-block;padding:15px 32px;font-size:0.82rem;letter-spacing:1.5px;text-transform:uppercase;border-radius:2px;font-weight:600;transition:all .25s;}
+.btn-primary{background:var(--accent);color:#0D0D0D;}
+.btn-primary:hover{background:#e0c26a;}
+.btn-outline{border:1px solid var(--border);color:var(--text);}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);}
+
+.back-link{display:inline-block;margin-bottom:24px;color:var(--muted);font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;}
+.back-link:hover{color:var(--accent);}
+
+.divider{height:1px;background:var(--border);width:100%;margin:0;}
+
+.page-hero{padding:190px 0 80px;border-bottom:1px solid var(--border);}
+.page-hero h1{font-size:3.2rem;margin-bottom:20px;}
+.page-hero p{color:var(--muted);max-width:680px;font-size:1.02rem;}
+@media(max-width:760px){.page-hero h1{font-size:2.2rem;} .page-hero{padding:150px 0 60px;}}
+
+footer{background:#000;border-top:1px solid var(--border);padding:60px 0 32px;margin-top:0;}
+footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;}
+footer .foot-name{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;}
+footer .foot-links{display:flex;gap:28px;flex-wrap:wrap;}
+footer .foot-links a{color:var(--muted);font-size:0.85rem;}
+footer .foot-links a:hover{color:var(--accent);}
+footer .foot-bottom{border-top:1px solid var(--border);margin-top:36px;padding-top:24px;color:var(--muted);font-size:0.78rem;text-align:center;}
+
+
+.research-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;}
+.research-card{background:var(--card);border:1px solid var(--border);padding:36px;transition:transform .25s, border-color .25s;}
+.research-card:hover{transform:translateY(-4px);border-color:var(--accent);}
+.research-card .rtag{color:var(--accent);font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;font-weight:600;}
+.research-card h3{font-size:1.3rem;margin-bottom:12px;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:0;}
+.research-card p{color:var(--muted);font-size:0.9rem;}
+.coming-soon{text-align:center;padding:60px 0;color:var(--muted);}
+@media(max-width:860px){.research-grid{grid-template-columns:1fr;}}
+
+</style>
+</head>
+<body>
+
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">RAVINA TOMAR</a>
+    <div class="nav-links"><a href="index.html#top">Home</a><a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="index.html#contact">Contact</a></div>
+  </div>
+</nav>
+
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Research &amp; Insights</div>
+    <h1>Thinking Behind the Practice</h1>
+    <p>A collection of reflections, frameworks, and insights drawn from my work in strategic HR, workforce planning, and cross-border people operations within international organisations.</p>
+  </div>
+</section>
+
+<section style="padding:90px 0;">
+  <div class="container">
+    <div class="research-grid">
+      
+      <div class="research-card">
+        <div class="rtag">Workforce Analytics</div>
+        <h3>Data-Driven Decision Making in Multilateral HR</h3>
+        <p>An exploration of how Power BI and HRIS-integrated dashboards can improve transparency and reduce turnaround time in large, geographically dispersed HR operations.</p>
+      </div>
+      <div class="research-card">
+        <div class="rtag">Organisational Design</div>
+        <h3>Realigning Roles Amid Restructuring</h3>
+        <p>Reflections on running stakeholder-driven workforce realignment exercises across HQ, regional, and country-office levels in international organisations.</p>
+      </div>
+      <div class="research-card">
+        <div class="rtag">Immigration & Mobility</div>
+        <h3>Cross-Border Mobility Compliance Frameworks</h3>
+        <p>Notes on balancing regulatory compliance with employee experience when managing visa and immigration processes for internationally mobile staff.</p>
+      </div>
+      <div class="research-card">
+        <div class="rtag">HR Technology</div>
+        <h3>AI-Enabled Tools in Modern HR Practice</h3>
+        <p>A look at how AI-enabled scheduling, assessment, and automation tools are reshaping day-to-day HR operations in multicultural, multi-country teams.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="container">
+    <div class="foot-name">RAVINA TOMAR</div>
+    <div class="foot-links">
+      <a href="mailto:theravinatomar@gmail.com">theravinatomar@gmail.com</a>
+      <a href="tel:+919811687268">+91 9811687268</a>
+      <a href="https://www.linkedin.com/in/theravinatomar" target="_blank">LinkedIn</a>
+      <a href="index.html#contact">New Delhi, India</a>
+    </div>
+  </div>
+  <div class="foot-bottom">© 2026 Ravina Tomar. All rights reserved.</div>
+</footer>
+
+
+</body>
+</html>

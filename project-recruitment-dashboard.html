@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cross-Regional Recruitment Dashboard | Ravina Tomar</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap');
+:root{
+  --bg:#0D0D0D; --card:#161513; --border:#2a2825; --text:#F4F1EA; --muted:#a8a29a;
+  --accent:#C9A84C; --accent-soft:rgba(201,168,76,0.12);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;font-weight:300;}
+.container{max-width:1180px;margin:0 auto;padding:0 40px;}
+h1,h2,h3{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:1px;line-height:1.05;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+
+.navbar{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(13,13,13,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
+.navbar .container{display:flex;justify-content:space-between;align-items:center;height:76px;}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:2px;}
+.nav-links{display:flex;gap:36px;}
+.nav-links a{font-size:0.85rem;letter-spacing:1px;text-transform:uppercase;color:var(--muted);transition:color .2s;position:relative;}
+.nav-links a:hover,.nav-links a.active{color:var(--accent);}
+@media(max-width:760px){.nav-links{gap:18px;} .nav-links a{font-size:0.7rem;}}
+
+.eyebrow{color:var(--accent);font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px;font-weight:600;}
+
+.btn{display:inline-block;padding:15px 32px;font-size:0.82rem;letter-spacing:1.5px;text-transform:uppercase;border-radius:2px;font-weight:600;transition:all .25s;}
+.btn-primary{background:var(--accent);color:#0D0D0D;}
+.btn-primary:hover{background:#e0c26a;}
+.btn-outline{border:1px solid var(--border);color:var(--text);}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);}
+
+.back-link{display:inline-block;margin-bottom:24px;color:var(--muted);font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;}
+.back-link:hover{color:var(--accent);}
+
+.divider{height:1px;background:var(--border);width:100%;margin:0;}
+
+.page-hero{padding:190px 0 80px;border-bottom:1px solid var(--border);}
+.page-hero h1{font-size:3.2rem;margin-bottom:20px;}
+.page-hero p{color:var(--muted);max-width:680px;font-size:1.02rem;}
+@media(max-width:760px){.page-hero h1{font-size:2.2rem;} .page-hero{padding:150px 0 60px;}}
+
+footer{background:#000;border-top:1px solid var(--border);padding:60px 0 32px;margin-top:0;}
+footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;}
+footer .foot-name{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;}
+footer .foot-links{display:flex;gap:28px;flex-wrap:wrap;}
+footer .foot-links a{color:var(--muted);font-size:0.85rem;}
+footer .foot-links a:hover{color:var(--accent);}
+footer .foot-bottom{border-top:1px solid var(--border);margin-top:36px;padding-top:24px;color:var(--muted);font-size:0.78rem;text-align:center;}
+
+
+.detail-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:36px 0 0;}
+.meta-item{background:var(--card);border:1px solid var(--border);padding:18px 20px;}
+.meta-item .label{color:var(--accent);font-size:0.7rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;}
+.meta-item .value{font-size:0.9rem;color:var(--text);}
+.detail-section{padding:56px 0;border-bottom:1px solid var(--border);}
+.detail-section:last-of-type{border-bottom:none;}
+.detail-section h2{font-size:1.7rem;margin-bottom:20px;color:var(--text);font-family:'Inter',sans-serif;font-weight:600;letter-spacing:0;}
+.eyebrow-mini{display:block;color:var(--accent);font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-weight:600;}
+.detail-section p{color:var(--muted);margin-bottom:14px;}
+.task-list{list-style:none;}
+.task-list li{background:var(--card);border:1px solid var(--border);padding:20px 22px;margin-bottom:14px;}
+.task-list li strong{color:var(--accent);display:block;margin-bottom:5px;font-size:0.95rem;}
+.task-list li span{color:var(--muted);font-size:0.9rem;}
+.plain-list{list-style:none;color:var(--muted);}
+.plain-list li{padding:9px 0 9px 20px;position:relative;font-size:0.92rem;}
+.plain-list li::before{content:"—";position:absolute;left:0;color:var(--accent);}
+.skills-pill-wrap{display:flex;flex-wrap:wrap;gap:10px;}
+.skills-pill{background:var(--accent-soft);color:var(--accent);font-size:0.8rem;padding:9px 18px;border-radius:20px;}
+.project-nav-footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:56px 0;}
+@media(max-width:860px){.detail-meta{grid-template-columns:1fr;}}
+
+</style>
+</head>
+<body>
+
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">RAVINA TOMAR</a>
+    <div class="nav-links"><a href="index.html#top">Home</a><a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="index.html#contact">Contact</a></div>
+  </div>
+</nav>
+
+
+<section class="page-hero">
+  <div class="container">
+    <a href="projects.html" class="back-link">← Back to Projects</a>
+    <div class="eyebrow">📊 Project Portfolio</div>
+    <h1>Cross-Regional Recruitment Dashboard</h1>
+    <p>Multiple duty stations across the South-East Asia region</p>
+    <div class="detail-meta">
+      <div class="meta-item"><div class="label">Organization</div><div class="value">World Health Organization, South-East Asia Regional Office (SEARO)</div></div>
+      <div class="meta-item"><div class="label">Scope</div><div class="value">Multiple duty stations across the South-East Asia region</div></div>
+      <div class="meta-item"><div class="label">Role</div><div class="value">Dashboard Designer & Recruitment Data Owner</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="container">
+    <h2><span class="eyebrow-mini">Background &amp; Context</span></h2>
+    <p>Prior to this project, recruitment tracking across WHO SEARO's various duty stations was fragmented — each location maintained its own spreadsheets, timelines, and panel records with little standardization. This made it difficult for regional leadership to get an accurate, real-time view of hiring pipeline health, panel workload, budget exposure from open positions, or where delays were occurring. Reconciliation between duty stations was manual, slow, and error-prone, and budget planning around recruitment was hampered by inconsistent or outdated data. Leadership needed a single, reliable, centralized view of recruitment activity across the region to support better decision-making.</p>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="container">
+    <h2><span class="eyebrow-mini">Project Aim</span></h2>
+    <p>To design and deploy a centralized dashboard consolidating hiring timelines, interview panel activity, and recruitment outcomes across multiple duty stations — improving reconciliation accuracy, supporting budget planning, and materially increasing overall data accuracy.</p>
+    
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="container">
+    <h2><span class="eyebrow-mini">My Involvement</span></h2>
+    <p>I owned this project end-to-end: from initial requirements gathering through to design, build, deployment, and stakeholder adoption. This was largely an individually-driven initiative, requiring me to combine HR domain knowledge (understanding recruitment workflows and pain points) with data structuring and dashboard-building skills.</p>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="container">
+    <h2><span class="eyebrow-mini">Key Tasks &amp; Responsibilities</span></h2>
+    <ul class="task-list">
+      <li><strong>Requirements gathering</strong><span>Consulted with hiring managers, recruitment panel coordinators, and HR colleagues across multiple duty stations to understand existing pain points, reporting needs, and the specific data points required for effective oversight.</span></li><li><strong>Data audit and standardization</strong><span>Reviewed the inconsistent recruitment data formats used across duty stations and designed a standardized data schema that could accommodate every duty station's data while enabling direct comparison and aggregation.</span></li><li><strong>Dashboard design and build</strong><span>Designed and built a centralized dashboard consolidating hiring pipeline stages and timelines per requisition, interview panel activity and composition, recruitment outcomes (offers extended, acceptances, declines, time-to-fill), and budget implications of open and in-progress recruitment actions.</span></li><li><strong>Reconciliation process design</strong><span>Established a systematic reconciliation process to validate dashboard data against source recruitment records at each duty station, catching discrepancies before they propagated into regional reporting.</span></li><li><strong>Data quality assurance</strong><span>Implemented checks and validation routines to catch and correct inconsistent or incomplete data entries at the point of intake, rather than after the fact.</span></li><li><strong>Stakeholder training and rollout</strong><span>Trained HR colleagues and hiring managers across duty stations on how to use the dashboard, ensuring consistent data entry practices and driving adoption of the new centralized system.</span></li><li><strong>Ongoing maintenance and iteration</strong><span>Continued to refine the dashboard based on user feedback, adding new views and metrics as leadership's reporting needs evolved.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="container">
+    <h2><span class="eyebrow-mini">Challenges Navigated</span></h2>
+    <ul class="plain-list">
+      <li>Resistance to standardization: some duty stations were accustomed to their own tracking methods and needed convincing that a centralized system would reduce, not add to, their workload.</li><li>Data quality at the source: many discrepancies uncovered during reconciliation stemmed from inconsistent data entry practices at the duty-station level, requiring both a technical fix (better validation) and a behavioral one (training and communication).</li><li>Balancing granularity with usability: the dashboard needed to be detailed enough for operational use while remaining simple enough for leadership to scan at a glance, requiring multiple rounds of stakeholder feedback.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="container">
+    <h2><span class="eyebrow-mini">Results &amp; Outcomes</span></h2>
+    <ul class="plain-list">
+      <li>Improved reconciliation of recruitment data across duty stations, replacing manual, error-prone comparisons with a systematic, centralized process.</li><li>Enhanced budget planning capability, as leadership could now see consolidated hiring costs, timelines, and pipeline status in one place.</li><li>Improved overall data accuracy by 25%, a direct, measurable improvement in the reliability of recruitment reporting.</li><li>Gave regional leadership a single source of truth for recruitment performance, enabling faster, better-informed hiring decisions.</li><li>Established a replicable data standardization framework that could be extended to other HR data domains beyond recruitment.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="container">
+    <h2><span class="eyebrow-mini">Skills &amp; Competencies Demonstrated</span></h2>
+    <div class="skills-pill-wrap">
+      <span class="skills-pill">HR Analytics & Dashboarding</span><span class="skills-pill">Data Standardization & Governance</span><span class="skills-pill">Stakeholder Training & Change Management</span><span class="skills-pill">Process Design</span><span class="skills-pill">Cross-Duty-Station Coordination</span><span class="skills-pill">Continuous Improvement</span>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="project-nav-footer">
+    <a href="projects.html" class="btn btn-outline">← All Projects</a>
+    <a href="index.html#contact" class="btn btn-primary">Contact Me</a>
+  </div>
+</div>
+
+
+<footer>
+  <div class="container">
+    <div class="foot-name">RAVINA TOMAR</div>
+    <div class="foot-links">
+      <a href="mailto:theravinatomar@gmail.com">theravinatomar@gmail.com</a>
+      <a href="tel:+919811687268">+91 9811687268</a>
+      <a href="https://www.linkedin.com/in/theravinatomar" target="_blank">LinkedIn</a>
+      <a href="index.html#contact">New Delhi, India</a>
+    </div>
+  </div>
+  <div class="foot-bottom">© 2026 Ravina Tomar. All rights reserved.</div>
+</footer>
+
+
+</body>
+</html>

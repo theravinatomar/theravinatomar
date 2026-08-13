@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regional Workforce Realignment | Ravina Tomar</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap');
+:root{
+  --bg:#0D0D0D; --card:#161513; --border:#2a2825; --text:#F4F1EA; --muted:#a8a29a;
+  --accent:#C9A84C; --accent-soft:rgba(201,168,76,0.12);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;font-weight:300;}
+.container{max-width:1180px;margin:0 auto;padding:0 40px;}
+h1,h2,h3{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:1px;line-height:1.05;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+
+.navbar{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(13,13,13,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
+.navbar .container{display:flex;justify-content:space-between;align-items:center;height:76px;}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:2px;}
+.nav-links{display:flex;gap:36px;}
+.nav-links a{font-size:0.85rem;letter-spacing:1px;text-transform:uppercase;color:var(--muted);transition:color .2s;position:relative;}
+.nav-links a:hover,.nav-links a.active{color:var(--accent);}
+@media(max-width:760px){.nav-links{gap:18px;} .nav-links a{font-size:0.7rem;}}
+
+.eyebrow{color:var(--accent);font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px;font-weight:600;}
+
+.btn{display:inline-block;padding:15px 32px;font-size:0.82rem;letter-spacing:1.5px;text-transform:uppercase;border-radius:2px;font-weight:600;transition:all .25s;}
+.btn-primary{background:var(--accent);color:#0D0D0D;}
+.btn-primary:hover{background:#e0c26a;}
+.btn-outline{border:1px solid var(--border);color:var(--text);}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);}
+
+.back-link{display:inline-block;margin-bottom:24px;color:var(--muted);font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;}
+.back-link:hover{color:var(--accent);}
+
+.divider{height:1px;background:var(--border);width:100%;margin:0;}
+
+.page-hero{padding:190px 0 80px;border-bottom:1px solid var(--border);}
+.page-hero h1{font-size:3.2rem;margin-bottom:20px;}
+.page-hero p{color:var(--muted);max-width:680px;font-size:1.02rem;}
+@media(max-width:760px){.page-hero h1{font-size:2.2rem;} .page-hero{padding:150px 0 60px;}}
+
+footer{background:#000;border-top:1px solid var(--border);padding:60px 0 32px;margin-top:0;}
+footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;}
+footer .foot-name{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;}
+footer .foot-links{display:flex;gap:28px;flex-wrap:wrap;}
+footer .foot-links a{color:var(--muted);font-size:0.85rem;}
+footer .foot-links a:hover{color:var(--accent);}
+footer .foot-bottom{border-top:1px solid var(--border);margin-top:36px;padding-top:24px;color:var(--muted);font-size:0.78rem;text-align:center;}
+
+
+.detail-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:36px 0 0;}
+.meta-item{background:var(--card);border:1px solid var(--border);padding:18px 20px;}
+.meta-item .label{color:var(--accent);font-size:0.7rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;}
+.meta-item .value{font-size:0.9rem;color:var(--text);}
+.detail-section{padding:56px 0;border-bottom:1px solid var(--border);}
+.detail-section:last-of-type{border-bottom:none;}
+.detail-section h2{font-size:1.7rem;margin-bottom:20px;color:var(--text);font-family:'Inter',sans-serif;font-weight:600;letter-spacing:0;}
+.eyebrow-mini{display:block;color:var(--accent);font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-weight:600;}
+.detail-section p{color:var(--muted);margin-bottom:14px;}
+.task-list{list-style:none;}
+.task-list li{background:var(--card);border:1px solid var(--border);padding:20px 22px;margin-bottom:14px;}
+.task-list li strong{color:var(--accent);display:block;margin-bottom:5px;font-size:0.95rem;}
+.task-list li span{color:var(--muted);font-size:0.9rem;}
+.plain-list{list-style:none;color:var(--muted);}
+.plain-list li{padding:9px 0 9px 20px;position:relative;font-size:0.92rem;}
+.plain-list li::before{content:"—";position:absolute;left:0;color:var(--accent);}
+.skills-pill-wrap{display:flex;flex-wrap:wrap;gap:10px;}
+.skills-pill{background:var(--accent-soft);color:var(--accent);font-size:0.8rem;padding:9px 18px;border-radius:20px;}
+.project-nav-footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:56px 0;}
+@media(max-width:860px){.detail-meta{grid-template-columns:1fr;}}
+
+</style>
+</head>
+<body>
+
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">RAVINA TOMAR</a>
+    <div class="nav-links"><a href="index.html#top">Home</a><a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="index.html#contact">Contact</a></div>
+  </div>
+</nav>
+
+
+<section class="page-hero">
+  <div class="container">
+    <a href="projects.html" class="back-link">← Back to Projects</a>
+    <div class="eyebrow">🌐 Project Portfolio</div>
+    <h1>Regional Workforce Realignment</h1>
+    <p>Cross-office initiative spanning Headquarters, the Regional Office, and multiple Country Offices across South-East Asia</p>
+    <div class="detail-meta">
+      <div class="meta-item"><div class="label">Organization</div><div class="value">World Health Organization, South-East Asia Regional Office (SEARO)</div></div>
+      <div class="meta-item"><div class="label">Scope</div><div class="value">Cross-office initiative spanning Headquarters, the Regional Office, and multiple Country Offices across South-East Asia</div></div>
+      <div class="meta-item"><div class="label">Role</div><div class="value">HR Coordinator / Workforce Planning Lead</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="container">
+    <h2><span class="eyebrow-mini">Background &amp; Context</span></h2>
+    <p>WHO SEARO, like many large multilateral organisations, periodically undergoes shifts in organisational priorities driven by global health agendas, funding realignments, and regional programme needs. As priorities evolved, the existing workforce structure — built around legacy programme needs — no longer matched the skills, roles, and staffing levels required for the region's revised strategic direction. Leadership needed a structured, evidence-based process to realign the workforce without disrupting critical operations, and needed this process to reflect input from every level of the organisation: Headquarters strategy, Regional Office execution, and Country Office ground realities. This project was commissioned to close that gap — translating high-level strategic priorities into concrete workforce structure decisions.</p>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="container">
+    <h2><span class="eyebrow-mini">Project Aim</span></h2>
+    <p>To lead a strategic prioritization and role-realignment exercise across HQ, regional office, and country-office stakeholders in South-East Asia, aligning the workforce structure to revised organisational priorities and directly informing leadership decisions on restructuring. The project had three core objectives:</p>
+    <ul class="plain-list"><li>Establish a shared understanding across HQ, regional, and country levels of which roles and functions were mission-critical under the new strategic priorities.</li><li>Identify structural misalignments — redundant roles, capability gaps, and understaffed priority functions.</li><li>Produce actionable, evidence-backed recommendations that leadership could use to make restructuring decisions with confidence.</li></ul>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="container">
+    <h2><span class="eyebrow-mini">My Involvement</span></h2>
+    <p>I served as the central coordination point for the entire exercise, effectively acting as the connective layer between three organisational levels that rarely interacted directly on workforce matters. With Headquarters, I translated corporate-level strategic priorities and policy guidance into criteria that could be applied practically at the regional and country level. With the Regional Office, I worked directly with regional leadership to define the realignment framework, timelines, and governance for the exercise. With Country Offices, I ran structured consultations with country-level HR focal points and programme managers to capture on-the-ground realities, local staffing constraints, and functional needs that HQ-level policy alone could not surface. This multi-level coordination role required constant translation between strategic language (used at HQ) and operational language (used at country level), ensuring nothing was lost or misinterpreted as information moved up and down the hierarchy.</p>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="container">
+    <h2><span class="eyebrow-mini">Key Tasks &amp; Responsibilities</span></h2>
+    <ul class="task-list">
+      <li><strong>Stakeholder consultation design and facilitation</strong><span>Designed structured consultation formats (workshops, interviews, structured questionnaires) to capture role priorities and functional needs consistently across HQ, regional, and country stakeholders, ensuring comparability of input despite different organisational contexts.</span></li><li><strong>Workforce mapping</strong><span>Built a comprehensive map of the existing workforce structure — roles, reporting lines, functions, and current staffing levels — across every duty station involved in the exercise.</span></li><li><strong>Gap and redundancy analysis</strong><span>Cross-referenced the existing workforce map against the revised organisational priorities to systematically identify redundant/lower-priority roles, capability gaps in priority functional areas, and structural inefficiencies such as duplicated reporting lines or unclear accountability.</span></li><li><strong>Data consolidation and synthesis</strong><span>Compiled staffing data, consultation findings, and functional priority assessments from multiple duty stations into a single, coherent analytical framework that leadership could act on.</span></li><li><strong>Leadership engagement</strong><span>Presented interim findings to senior leadership at multiple checkpoints, incorporating their feedback into subsequent rounds of analysis and adjusting the realignment framework as strategic priorities were clarified.</span></li><li><strong>Recommendation development</strong><span>Worked with leadership to translate the realignment analysis into concrete, actionable restructuring proposals — including role consolidations, reallocation of positions to priority functions, and adjusted staffing levels by duty station.</span></li><li><strong>Documentation and audit trail</strong><span>Maintained rigorous documentation of the consultation process, analytical methodology, and decision rationale throughout the exercise, ensuring transparency and defensibility of the final recommendations.</span></li><li><strong>Change communication support</strong><span>Supported leadership in preparing communication materials to explain realignment rationale to affected staff and stakeholders, helping manage the sensitivity inherent in any workforce restructuring exercise.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="container">
+    <h2><span class="eyebrow-mini">Challenges Navigated</span></h2>
+    <ul class="plain-list">
+      <li>Balancing competing priorities across levels: HQ's strategic priorities did not always map cleanly onto country-level operational realities, requiring significant effort to reconcile perspectives without diluting strategic intent or practical feasibility.</li><li>Sensitivity of restructuring discussions: consultations were designed and facilitated carefully to gather honest input while maintaining trust and minimizing disruption around job security concerns.</li><li>Data consistency across duty stations: country offices tracked workforce and role information differently, requiring substantial normalization before analysis could begin.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="container">
+    <h2><span class="eyebrow-mini">Results &amp; Outcomes</span></h2>
+    <ul class="plain-list">
+      <li>The realignment findings directly informed leadership restructuring decisions at the regional level, giving senior leadership an evidence-based foundation for structural changes.</li><li>Produced a workforce structure demonstrably better aligned to the organisation's revised strategic priorities across a multicultural, multi-country stakeholder base.</li><li>Strengthened the cross-office collaboration model, establishing a replicable framework for future workforce planning exercises.</li><li>Enhanced organisational transparency around restructuring rationale, reducing ambiguity for affected teams and supporting smoother change management.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="detail-section">
+  <div class="container">
+    <h2><span class="eyebrow-mini">Skills &amp; Competencies Demonstrated</span></h2>
+    <div class="skills-pill-wrap">
+      <span class="skills-pill">Strategic Workforce Planning</span><span class="skills-pill">Multi-Level Stakeholder Management</span><span class="skills-pill">Organisational Design</span><span class="skills-pill">Change Management</span><span class="skills-pill">Data Synthesis & Analysis</span><span class="skills-pill">Cross-Cultural Communication</span><span class="skills-pill">Executive-Facing Reporting</span><span class="skills-pill">Sensitive-Topic Facilitation</span>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="project-nav-footer">
+    <a href="projects.html" class="btn btn-outline">← All Projects</a>
+    <a href="index.html#contact" class="btn btn-primary">Contact Me</a>
+  </div>
+</div>
+
+
+<footer>
+  <div class="container">
+    <div class="foot-name">RAVINA TOMAR</div>
+    <div class="foot-links">
+      <a href="mailto:theravinatomar@gmail.com">theravinatomar@gmail.com</a>
+      <a href="tel:+919811687268">+91 9811687268</a>
+      <a href="https://www.linkedin.com/in/theravinatomar" target="_blank">LinkedIn</a>
+      <a href="index.html#contact">New Delhi, India</a>
+    </div>
+  </div>
+  <div class="foot-bottom">© 2026 Ravina Tomar. All rights reserved.</div>
+</footer>
+
+
+</body>
+</html>

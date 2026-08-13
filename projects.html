@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Ravina Tomar</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap');
+:root{
+  --bg:#0D0D0D; --card:#161513; --border:#2a2825; --text:#F4F1EA; --muted:#a8a29a;
+  --accent:#C9A84C; --accent-soft:rgba(201,168,76,0.12);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;font-weight:300;}
+.container{max-width:1180px;margin:0 auto;padding:0 40px;}
+h1,h2,h3{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:1px;line-height:1.05;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+
+.navbar{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(13,13,13,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
+.navbar .container{display:flex;justify-content:space-between;align-items:center;height:76px;}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:2px;}
+.nav-links{display:flex;gap:36px;}
+.nav-links a{font-size:0.85rem;letter-spacing:1px;text-transform:uppercase;color:var(--muted);transition:color .2s;position:relative;}
+.nav-links a:hover,.nav-links a.active{color:var(--accent);}
+@media(max-width:760px){.nav-links{gap:18px;} .nav-links a{font-size:0.7rem;}}
+
+.eyebrow{color:var(--accent);font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px;font-weight:600;}
+
+.btn{display:inline-block;padding:15px 32px;font-size:0.82rem;letter-spacing:1.5px;text-transform:uppercase;border-radius:2px;font-weight:600;transition:all .25s;}
+.btn-primary{background:var(--accent);color:#0D0D0D;}
+.btn-primary:hover{background:#e0c26a;}
+.btn-outline{border:1px solid var(--border);color:var(--text);}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);}
+
+.back-link{display:inline-block;margin-bottom:24px;color:var(--muted);font-size:0.82rem;letter-spacing:1px;text-transform:uppercase;}
+.back-link:hover{color:var(--accent);}
+
+.divider{height:1px;background:var(--border);width:100%;margin:0;}
+
+.page-hero{padding:190px 0 80px;border-bottom:1px solid var(--border);}
+.page-hero h1{font-size:3.2rem;margin-bottom:20px;}
+.page-hero p{color:var(--muted);max-width:680px;font-size:1.02rem;}
+@media(max-width:760px){.page-hero h1{font-size:2.2rem;} .page-hero{padding:150px 0 60px;}}
+
+footer{background:#000;border-top:1px solid var(--border);padding:60px 0 32px;margin-top:0;}
+footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;}
+footer .foot-name{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;}
+footer .foot-links{display:flex;gap:28px;flex-wrap:wrap;}
+footer .foot-links a{color:var(--muted);font-size:0.85rem;}
+footer .foot-links a:hover{color:var(--accent);}
+footer .foot-bottom{border-top:1px solid var(--border);margin-top:36px;padding-top:24px;color:var(--muted);font-size:0.78rem;text-align:center;}
+
+
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.project-card{background:var(--card);border:1px solid var(--border);padding:32px 28px;transition:transform .25s, border-color .25s;display:flex;flex-direction:column;}
+.project-card:hover{transform:translateY(-4px);border-color:var(--accent);}
+.project-icon{font-size:1.7rem;margin-bottom:16px;}
+.project-card h3{font-size:1.25rem;margin-bottom:6px;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:0;}
+.project-card .org{color:var(--accent);font-size:0.72rem;letter-spacing:1px;margin-bottom:14px;text-transform:uppercase;}
+.project-card p{color:var(--muted);font-size:0.88rem;margin-bottom:18px;flex-grow:1;}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+.tag{background:var(--accent-soft);color:var(--accent);font-size:0.72rem;padding:5px 12px;border-radius:20px;}
+.project-card .btn-outline{align-self:flex-start;padding:10px 20px;font-size:0.75rem;}
+@media(max-width:860px){.projects-grid{grid-template-columns:1fr;}}
+
+</style>
+</head>
+<body>
+
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">RAVINA TOMAR</a>
+    <div class="nav-links"><a href="index.html#top">Home</a><a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="index.html#contact">Contact</a></div>
+  </div>
+</nav>
+
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Project Portfolio</div>
+    <h1>HR Operations &amp; HR Business Partner Track</h1>
+    <p>This portfolio contains detailed write-ups of five major HR projects delivered across WHO SEARO and the British Council. Each page outlines the project's aim, my involvement, key tasks, challenges navigated, results, and skills demonstrated.</p>
+  </div>
+</section>
+
+<section style="padding:90px 0;">
+  <div class="container">
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-icon">🌐</div>
+        <h3>Regional Workforce Realignment</h3>
+        <div class="org">WHO SEARO</div>
+        <p>Led a strategic prioritization and role-realignment exercise across HQ, regional office, and country-office stakeholders, directly informing leadership restructuring decisions.</p>
+        <div class="tags"><span class="tag">Workforce Planning</span><span class="tag">Change Management</span><span class="tag">Organisational Design</span></div>
+        <a href="project-workforce-realignment.html" class="btn btn-outline">View Details →</a>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">📊</div>
+        <h3>Cross-Regional Recruitment Dashboard</h3>
+        <div class="org">WHO SEARO</div>
+        <p>Designed and deployed a centralized dashboard consolidating hiring timelines, panel activity, and outcomes across duty stations, improving data accuracy by 25%.</p>
+        <div class="tags"><span class="tag">Power BI</span><span class="tag">HR Analytics</span><span class="tag">Data Governance</span></div>
+        <a href="project-recruitment-dashboard.html" class="btn btn-outline">View Details →</a>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">📄</div>
+        <h3>Position Description Revitalization</h3>
+        <div class="org">WHO SEARO</div>
+        <p>Led the revision and standardization of position descriptions across a multicultural workforce, strengthening role clarity and capability-fit alignment.</p>
+        <div class="tags"><span class="tag">Job Analysis</span><span class="tag">Competency Mapping</span><span class="tag">Compliance</span></div>
+        <a href="project-position-description.html" class="btn btn-outline">View Details →</a>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">💰</div>
+        <h3>Programme Financial & Timeline Dashboard</h3>
+        <div class="org">WHO SEARO</div>
+        <p>Built a workstream-level tracker monitoring timelines, funding allocation, and expenditure, cutting process turnaround time by 15–20%.</p>
+        <div class="tags"><span class="tag">Dashboard Design</span><span class="tag">Budget Tracking</span><span class="tag">Cross-Border Teams</span></div>
+        <a href="project-financial-dashboard.html" class="btn btn-outline">View Details →</a>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">✈️</div>
+        <h3>Cross-Border Mobility & Visa Liaison</h3>
+        <div class="org">British Council</div>
+        <p>Coordinated onboarding, documentation, and visa/immigration processes for a dispersed workforce while leading a 4-member support team.</p>
+        <div class="tags"><span class="tag">Immigration Compliance</span><span class="tag">Team Leadership</span><span class="tag">Process Improvement</span></div>
+        <a href="project-mobility-visa.html" class="btn btn-outline">View Details →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="container">
+    <div class="foot-name">RAVINA TOMAR</div>
+    <div class="foot-links">
+      <a href="mailto:theravinatomar@gmail.com">theravinatomar@gmail.com</a>
+      <a href="tel:+919811687268">+91 9811687268</a>
+      <a href="https://www.linkedin.com/in/theravinatomar" target="_blank">LinkedIn</a>
+      <a href="index.html#contact">New Delhi, India</a>
+    </div>
+  </div>
+  <div class="foot-bottom">© 2026 Ravina Tomar. All rights reserved.</div>
+</footer>
+
+
+</body>
+</html>
