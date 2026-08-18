@@ -115,6 +115,26 @@ footer .foot-bottom{border-top:1px solid var(--border);margin-top:36px;padding-t
 .contact-info a{color:var(--text);}
 .contact-info a:hover{color:var(--accent);}
 
+/* ── References — Card Grid (Option A) ───────────── */
+.ref-section{padding:110px 0;border-bottom:1px solid var(--border);}
+.ref-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px;}
+.ref-card{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--accent);padding:36px 32px;position:relative;transition:transform .25s,box-shadow .25s;}
+.ref-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(201,168,76,0.10);}
+.ref-serial{font-family:'Bebas Neue',sans-serif;font-size:3rem;color:var(--accent);opacity:0.25;position:absolute;top:24px;right:28px;line-height:1;}
+.ref-name{font-size:1.12rem;font-weight:700;color:var(--text);margin-bottom:4px;letter-spacing:0.3px;}
+.ref-org{font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:20px;font-weight:600;}
+.ref-divider{height:1px;background:var(--border);margin-bottom:20px;}
+.ref-meta{display:flex;flex-direction:column;gap:8px;margin-bottom:22px;}
+.ref-row{display:flex;align-items:flex-start;gap:10px;font-size:0.85rem;}
+.ref-row-label{color:var(--muted);width:70px;flex-shrink:0;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;padding-top:2px;}
+.ref-row-val{color:var(--text);}
+.ref-row-val a{color:var(--muted);transition:color .2s;}
+.ref-row-val a:hover{color:var(--accent);}
+.ref-badge{display:inline-block;padding:4px 14px;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;border-radius:2px;font-weight:600;}
+.ref-badge-supervisor{background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent);}
+.ref-badge-professional{background:transparent;color:var(--muted);border:1px solid var(--border);}
+@media(max-width:760px){.ref-grid{grid-template-columns:1fr;} .ref-section{padding:80px 0;}}
+
 </style>
 </head>
 <body id="top">
@@ -123,7 +143,7 @@ footer .foot-bottom{border-top:1px solid var(--border);margin-top:36px;padding-t
 <nav class="navbar">
   <div class="container">
     <a href="index.html" class="nav-logo">RAVINA TOMAR</a>
-    <div class="nav-links"><a href="index.html#top" class="active">Home</a><a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="index.html#contact">Contact</a></div>
+    <div class="nav-links"><a href="index.html#top" class="active">Home</a><a href="index.html#about">About</a><a href="index.html#experience">Experience</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="index.html#references">References</a><a href="index.html#contact">Contact</a></div>
   </div>
 </nav>
 
@@ -276,19 +296,122 @@ footer .foot-bottom{border-top:1px solid var(--border);margin-top:36px;padding-t
         <div class="yr">Ongoing</div>
       </div>
       <div class="edu-card">
-        <div class="deg">M.Sc. – Resource Management & Ergonomics (HRM)</div>
+        <div class="deg">M.Sc. – Resource Management &amp; Ergonomics (HRM)</div>
         <div class="inst">SNDT Women's University</div>
         <div class="yr">Completed</div>
       </div>
       <div class="edu-card">
         <div class="deg">Diploma – Human Resource Management</div>
-        <div class="inst">Executive Strategy & Management, Alison</div>
+        <div class="inst">Executive Strategy &amp; Management, Alison</div>
         <div class="yr">2024</div>
       </div></div>
     <div class="lang-row">
       <div class="lang-item"><b>English</b> — Fluent (Written &amp; Verbal)</div>
       <div class="lang-item"><b>Hindi</b> — Native / Proficient</div>
       <div class="lang-item"><b>French</b> — Beginner</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Professional References ── -->
+<section class="ref-section" id="references">
+  <div class="container">
+    <div class="eyebrow">Professional References</div>
+    <h2 class="section-title">References</h2>
+    <div class="ref-grid">
+
+      <!-- Card 01 -->
+      <div class="ref-card">
+        <div class="ref-serial">01</div>
+        <div class="ref-name">Mr. Arun Ratnam</div>
+        <div class="ref-org">World Health Organisation</div>
+        <div class="ref-divider"></div>
+        <div class="ref-meta">
+          <div class="ref-row">
+            <span class="ref-row-label">Title</span>
+            <span class="ref-row-val">BMS Coordinator</span>
+          </div>
+          <div class="ref-row">
+            <span class="ref-row-label">Phone</span>
+            <span class="ref-row-val"><a href="tel:+919810788166">+91 98107 88166</a></span>
+          </div>
+          <div class="ref-row">
+            <span class="ref-row-label">Email</span>
+            <span class="ref-row-val"><a href="mailto:ratnama@who.int">ratnama@who.int</a></span>
+          </div>
+        </div>
+        <span class="ref-badge ref-badge-supervisor">Supervisor</span>
+      </div>
+
+      <!-- Card 02 -->
+      <div class="ref-card">
+        <div class="ref-serial">02</div>
+        <div class="ref-name">Ms. Anita Abhyankar</div>
+        <div class="ref-org">World Health Organisation</div>
+        <div class="ref-divider"></div>
+        <div class="ref-meta">
+          <div class="ref-row">
+            <span class="ref-row-label">Title</span>
+            <span class="ref-row-val">Regional Personnel Officer</span>
+          </div>
+          <div class="ref-row">
+            <span class="ref-row-label">Phone</span>
+            <span class="ref-row-val"><a href="tel:+919811766566">+91 98117 66566</a></span>
+          </div>
+          <div class="ref-row">
+            <span class="ref-row-label">Email</span>
+            <span class="ref-row-val"><a href="mailto:abyankara@who.int">abyankara@who.int</a></span>
+          </div>
+        </div>
+        <span class="ref-badge ref-badge-supervisor">Supervisor</span>
+      </div>
+
+      <!-- Card 03 -->
+      <div class="ref-card">
+        <div class="ref-serial">03</div>
+        <div class="ref-name">Ms. Jyoti Rajesh</div>
+        <div class="ref-org">British High Commission</div>
+        <div class="ref-divider"></div>
+        <div class="ref-meta">
+          <div class="ref-row">
+            <span class="ref-row-label">Title</span>
+            <span class="ref-row-val">HR Officer – India Support</span>
+          </div>
+          <div class="ref-row">
+            <span class="ref-row-label">Phone</span>
+            <span class="ref-row-val"><a href="tel:+91729006386">729006386</a></span>
+          </div>
+          <div class="ref-row">
+            <span class="ref-row-label">Email</span>
+            <span class="ref-row-val"><a href="mailto:Jyoti.Rajesh@fcdo.gov.uk">Jyoti.Rajesh@fcdo.gov.uk</a></span>
+          </div>
+        </div>
+        <span class="ref-badge ref-badge-professional">Professional</span>
+      </div>
+
+      <!-- Card 04 -->
+      <div class="ref-card">
+        <div class="ref-serial">04</div>
+        <div class="ref-name">Mr. Vikram G</div>
+        <div class="ref-org">British Council</div>
+        <div class="ref-divider"></div>
+        <div class="ref-meta">
+          <div class="ref-row">
+            <span class="ref-row-label">Title</span>
+            <span class="ref-row-val">Senior Manager</span>
+          </div>
+          <div class="ref-row">
+            <span class="ref-row-label">Phone</span>
+            <span class="ref-row-val"><a href="tel:+918860818563">88608 18563</a></span>
+          </div>
+          <div class="ref-row">
+            <span class="ref-row-label">Email</span>
+            <span class="ref-row-val"><a href="mailto:Er.Vikram@hotmail.com">Er.Vikram@hotmail.com</a></span>
+          </div>
+        </div>
+        <span class="ref-badge ref-badge-professional">Professional</span>
+      </div>
+
     </div>
   </div>
 </section>
